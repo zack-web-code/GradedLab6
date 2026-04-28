@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Validation</title>
+    <link rel="stylesheet" href="protectaccess.css">
 </head>
 <body>
     <form action="/protectaccess" method="post">
         <fieldset>
-            <input type="text" name="name"> Name <br>
-            <input type="text" name="pw"> Password <br>
-            <input type="text" name="IDnumber"> ID number <br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"> <br>
+            <label for="pw">Password:</label>
+            <input type="text" id="pw" name="pw"> <br>
+            <label for="IDnumber">ID number:</label>
+            <input type="text" id="IDnumber" name="IDnumber"> <br>
             <input type="submit">
         </fieldset>
     </form>
