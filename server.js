@@ -10,7 +10,7 @@ app.use(express.static(__dirname));
 /*So for the results page, i created this helper function insteaad of writing it in the post route
 to keep the code organised and easy to to understand and maintain.*/ 
 
-function buildResultPage(headingColor, headingText, name, maskedPassword, cleanID, data) {
+function TheResultPage(headingColor, headingText, name, maskedPassword, cleanID, data) {
   return `
     <!DOCTYPE html>
     <html>
@@ -83,7 +83,7 @@ app.post('/protectaccess', (req, res) => {
                 res.send('Error reading results file');
                 return;
             }
-            res.send(buildResultPage(headingColor, headingText, name, maskedPassword, cleanID, data));
+            res.send(TheResultPage(headingColor, headingText, name, maskedPassword, cleanID, data));
         });
     });
 });
